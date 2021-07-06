@@ -1,0 +1,70 @@
+<! DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>InnerHTML</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+
+</head>
+
+<body>
+    <div class="container mt-2">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="card">
+                    <img class="card-img-top" src="" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <a href='' class="btn btn-primary">Go pic</a>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <script>
+        var models = [{
+                name: 'Mazda Cx-3',
+                image: 'img/mazda.jpg',
+                link: 'https://images.unsplash.com/photo-1616788494668-50d2b041209f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80'
+            }, {
+                name: 'BMW',
+                image: 'img/bmw.jpg',
+                link: 'https://images.unsplash.com/photo-1597404294360-feeeda04612e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80'
+            },
+
+            {
+                name: 'Volvo S60',
+                image: 'img/volvo.jpg',
+                link: 'https://images.unsplash.com/photo-1489824904134-891ab64532f1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80'
+            }
+        ]
+
+        setInterval(function() {
+            var index = Math.floor(Math.random() * models.length);
+            var car1 = document.querySelector('.card-img-top');
+            car1.setAttribute('src', models[index].image);
+            var car = document.querySelector('.card-title');
+            car.innerHTML = models[index].name;
+            var car2 = document.querySelector('a');
+            car2.setAttribute('href', models[index].link);
+
+            // var car3 = document.querySelector('.card-img-top');
+            // car3.setAttribute('src', models[1].image);
+            // var car4 = document.querySelector('.card-title');
+            // car4.innerHTML = models[1].name;
+            // var car5 = document.querySelector('a');
+            // car5.setAttribute('href', models[1].link);
+
+        }, 1000)
+    </script>
+
+
+
+</body>
+
+</html>

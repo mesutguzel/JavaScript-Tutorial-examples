@@ -1,0 +1,45 @@
+<! DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AccessingTag</title>
+    <style>
+        .box {
+            width: 100;
+            height: 100;
+            margin: 10;
+            float: left;
+        }
+        
+        #blue {
+            background-color: blue;
+        }
+        
+        #red {
+            background-color: red;
+        }
+        
+        #yellow {
+            background-color: yellow;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="blue" class="box"></div>
+    <div id="red" class="box"></div>
+    <div id="yellow" class="box"></div>
+
+    <script>
+        var red = document.getElementById('#red');
+
+
+        red.removeEventListener("click", red);
+    </script>
+
+
+</body>
+
+</html>
